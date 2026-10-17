@@ -1,1 +1,107 @@
 @import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #080a0e;
+  --surface: #0f131a;
+  --ink: #eef1f6;
+  --muted: #8b93a3;
+  --line: #1e2530;
+  --accent: #ff4b2b;
+  --accent-ink: #080a0e;
+  --blue: #3b82f6;
+  --green: #2ee6a6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #f4f5f8;
+    --surface: #ffffff;
+    --ink: #0b0f17;
+    --muted: #566073;
+    --line: #d7dce5;
+    --accent: #c93418;
+    --accent-ink: #ffffff;
+    --blue: #2563eb;
+    --green: #0a8f63;
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --ink: #0b0f17;
+  --muted: #566073;
+  --line: #d7dce5;
+  --accent: #c93418;
+  --accent-ink: #ffffff;
+  --blue: #2563eb;
+  --green: #0a8f63;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-canvas: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-blue: var(--blue);
+  --color-green: var(--green);
+}
+
+@theme {
+  --font-display: "Unbounded", "Arial Black", Arial, sans-serif;
+  --font-body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
