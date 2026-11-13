@@ -19,4 +19,40 @@ export const defaultPortfolio = {
     { label: 'LinkedIn', href: '#' },
     { label: 'Telegram', href: '#' },
   ],
+  hero: {
+    summary: 'A short introduction for Samuel will be added in a later content task.',
+    cvUrl: '#',
+  },
+  sections: [
+    {
+      id: 'about',
+      eyebrow: 'About',
+      title: 'Professional journey',
+      note: 'Placeholder: the About section will be filled in by a later task.',
+    },
+    {
+      id: 'skills',
+      eyebrow: 'Skills',
+      title: 'Technical expertise',
+      note: 'Placeholder: the Skills section will be filled in by a later task.',
+    },
+    {
+      id: 'work',
+      eyebrow: 'Selected work',
+      title: "What I've built for production",
+      note: 'Placeholder: the Work section will be filled in by a later task.',
+    },
+    {
+      id: 'timeline',
+      eyebrow: 'Timeline',
+      title: "Where I've built real systems",
+      note: 'Placeholder: the Timeline section will be filled in by a later task.',
+    },
+    {
+      id: 'contact',
+      eyebrow: 'Contact',
+      title: "Let's build something",
+      note: 'Placeholder: the Contact section will be filled in by a later task.',
+    },
+  ],
 }
